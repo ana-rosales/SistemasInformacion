@@ -12,10 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($user && password_verify($contrasena, $user['contrasena'])) {
         $_SESSION['user_id'] = $user['id'];
-        header('Location: listaEventos.php');
+        header('Location: Pagina/listaEventos.php');
         exit;
     } else {
-        header('Location: vuelveIniciarSesion.html');
+        header('Location: Pagina/vuelveIniciarSesion.html');
     }
 }
 ?>

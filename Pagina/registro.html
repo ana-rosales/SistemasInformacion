@@ -22,26 +22,34 @@
             <div class="columns is-centered is-mobile mt-6 mb-5">
                 <h1 class="is-size-1 has-text-weight-light">Registro</h1>
             </div>
-            <form>
+            <form action="../registro.php" method="POST">
+                <div id="UsuarioTotal" class="columns is-centered is-multiline is-mobile">
+                    <div class="column is-5-desktop is-5-tablet is-11-mobile">
+                        <label class="label">Nombre de usuario</label>
+                        <div class="control">
+                            <input class="input" type="text" name="usuario" placeholder="Ingrese un nombre de usuario" required>
+                        </div>
+                    </div>
+                </div>
                 <div id="NombreTotal" class="columns is-centered is-multiline is-mobile">
-                        <div class="column is-5-desktop is-5-tablet is-11-mobile">
-                            <label class="label">Nombre (s)</label>
-                            <div class="control">
-                                <input class="input" type="text" >
-                            </div>
+                    <div class="column is-5-desktop is-5-tablet is-11-mobile">
+                        <label class="label">Nombre (s)</label>
+                        <div class="control">
+                            <input class="input" type="text" name="nombre" placeholder="Ingrese su nombre" required>
                         </div>
-                        <div class="column is-5-desktop is-5-tablet is-11-mobile">
-                            <label class="label">Apellidos</label>
-                            <div class="control">
-                                <input class="input" type="text">
-                            </div>
+                    </div>
+                    <div class="column is-5-desktop is-5-tablet is-11-mobile">
+                        <label class="label">Apellidos</label>
+                        <div class="control">
+                            <input class="input" type="text" name="apellido" placeholder="Ingrese sus apellidos" required>
                         </div>
+                    </div>
                 </div>
                 <div id="CorreoTotal" class="columns is-centered is-mobile">
                     <div class="field column is-10-desktop is-10-tablet is-11-mobile">
                         <label class="label">Correo</label>
                         <div class="control">
-                            <input class="input" type="email">
+                            <input class="input" type="email" name="correo" placeholder="Ingrese su correo" required>
                         </div>
                     </div>
                 </div>
@@ -49,7 +57,7 @@
                     <div class="field column is-10-desktop is-10-tablet is-11-mobile">
                         <label class="label">Contraseña</label>
                         <div class="control">
-                            <input class="input" type="password">
+                            <input class="input" type="password" name="contrasena" placeholder="Ingrese su contraseña" required>
                         </div>
                     </div>
                 </div>
@@ -57,21 +65,21 @@
                     <div class="field column is-10-desktop is-10-tablet is-11-mobile">
                         <div class="columns is-mobile is-centered">
                             <div class="control">
-                                <button class="button is-link mx-5 my-5">Registrarse  <i class="fa-regular fa-paper-plane" style="padding-left: 5px;"></i></button>
+                                <button type="submit" class="button is-link mx-5 my-5">Registrarse
+                                    <i class="fa-regular fa-paper-plane" style="padding-left: 5px;"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </form>
         </section>
 
         <footer class="footer has-background-info">
             <div class="content has-text-centered">
                 <p>
-                    <strong>17 de octubre de 2024</strong>
                     <br>Ana Paula Rosales Olguín <i class="fas fa-moon"></i> Germán Heberto Pancardo Ortega<br>
-                    <strong>Ciudad de México.</strong>
+                    <strong>Ciudad de México | 2024</strong>
                 </p>
             </div>
         </footer>

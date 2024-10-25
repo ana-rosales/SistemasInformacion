@@ -1,0 +1,5 @@
+DirectoryIndex  http://sistemasinformacion.000.pe/Pagina/index.html
+
+ErrorDocument 403 http://sistemasinformacion.000.pe/Pagina/errorProhibido.html
+ErrorDocument 404 http://sistemasinformacion.000.pe/Pagina/error.html
+ErrorDocument 500 http://sistemasinformacion.000.pe/Pagina/error.html
