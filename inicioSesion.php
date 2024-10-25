@@ -18,11 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['user_id'] = $user['idAsistente'];
         
         // Redirect to a dashboard or homepage
-        header('Location: dashboard.php'); // Replace 'dashboard.php' with the actual page
+        header('Location: Pagina/listaEventos.php'); // Replace 'dashboard.php' with the actual page
         exit;
     } else {
         // Redirect to an error page or show an error message
-        header('Location: loginError.html'); // Replace 'loginError.html' with the actual error page
+        header('Location: Pagina/error.html'); // Replace 'loginError.html' with the actual error page
         exit;
     }
 }
