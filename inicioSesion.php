@@ -3,19 +3,27 @@ session_start();
 require 'conexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $usuario = $_POST['usuario'];
+    // Retrieve and sanitize input data
+    $usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
     $contrasena = $_POST['contrasena'];
 
-    $stmt = $pdo->prepare('SELECT id, contrasena FROM usuarios WHERE usuario = :usuario');
-    $stmt->execute(['usuario' => $usuario]);
-    $user = $stmt->fetch();
+    // Prepare and execute the SQL statement
+    $stmt = $pdo->prepare('SELECT idAsistente, contrasena FROM asistente WHERE usuario = :usuario');
+    $stmt->execute([':usuario' => $usuario]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    // Verify password
     if ($user && password_verify($contrasena, $user['contrasena'])) {
-        $_SESSION['user_id'] = $user['id'];
-        header('Location: Pagina/listaEventos.php');
+        // Store user ID in session upon successful login
+        $_SESSION['user_id'] = $user['idAsistente'];
+        
+        // Redirect to a dashboard or homepage
+        header('Location: dashboard.php'); // Replace 'dashboard.php' with the actual page
         exit;
     } else {
-        header('Location: Pagina/vuelveIniciarSesion.html');
+        // Redirect to an error page or show an error message
+        header('Location: loginError.html'); // Replace 'loginError.html' with the actual error page
+        exit;
     }
 }
 ?>
