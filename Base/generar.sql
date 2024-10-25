@@ -54,7 +54,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`asistente` (
   `constancias` VARCHAR(45) NULL,
   `asistentecol` JSON NULL,
   `usuario` VARCHAR(45) NULL,
-  `password` VARCHAR(45) NULL,
+  `contrasena` VARCHAR(45) NULL,
+  `correo` VARCHAR(45) NULL,
   PRIMARY KEY (`idAsistente`))
 ENGINE = InnoDB;
 
@@ -65,7 +66,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mydb`.`admin` (
   `idadmin` INT NOT NULL,
   `usuario` VARCHAR(45) NULL,
-  `password` VARCHAR(45) NULL,
+  `contrasena` VARCHAR(45) NULL,
   `contrasena` VARCHAR(45) NULL,
   PRIMARY KEY (`idadmin`))
 ENGINE = InnoDB;

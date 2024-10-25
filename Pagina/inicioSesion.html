@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Log In</title>
+        <title>Inicio de Sesión</title>
     </head>
     <body>
         <nav class="navbar is-info" role="navigation" aria-label="main navigation">
@@ -22,10 +22,18 @@
             <div class="columns is-centered is-mobile mt-6 mb-5">
                 <h1 class="is-size-1 has-text-weight-light">Ingreso</h1>
             </div>
-            <form>
-                <div class="columns is-centered is-mobile">
+            <form action="../inicioSesion.php" method="POST">
+                <div id="UsuarioTotal" class="columns is-centered is-mobile">
                     <div class="field column is-10-desktop is-10-tablet is-11-mobile">
-                        <label class="label">Correo</label>
+                        <label class="label">Usuario</label>
+                        <div class="control">
+                            <input class="input" type="string">
+                        </div>
+                    </div>
+                </div>
+                <div id="CorreoTotal" class="columns is-centered is-mobile">
+                    <div class="field column is-10-desktop is-10-tablet is-11-mobile">
+                        <label class="label">Correo Electrónico</label>
                         <div class="control">
                             <input class="input" type="email">
                         </div>
@@ -33,22 +41,21 @@
                 </div>
                 <div class="columns is-centered is-mobile">
                     <div class="field column is-10-desktop is-10-tablet is-11-mobile">
-                        <label class="label">ContraseÃ±a</label>
+                        <label class="label">Contraseña</label>
                         <div class="control">
                             <input class="input" type="password">
                         </div>
                     </div>
                 </div>
-                <div class="columns is-centered is-mobile">
+                <div id="BotonTotal" class="columns is-centered is-mobile">
                     <div class="field column is-10-desktop is-10-tablet is-11-mobile">
                         <div class="columns is-mobile is-centered">
                             <div class="control">
-                                <button class="button is-link mx-5 my-5">Ingresar</button>
+                                <button class="button is-link mx-5 my-5">Ingresar<i class="fa-regular fa-paper-plane" style="padding-left: 5px;"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </form>
         </section>
 

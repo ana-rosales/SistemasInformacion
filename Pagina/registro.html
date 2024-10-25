@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-light">
+<html lang="es" class="theme-light">
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
@@ -15,27 +15,7 @@
                         <i class="fas fa-home fa-lg"></i>
                     </span>
                 </a>
-                <!-- <a role="button" id="burger" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="NavMenu">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a> -->
             </div>
-            <!-- <div class="navbar-menu" id="NavMenu">
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-info is-dark" href="registro.html">
-                                <strong>Registro</strong>
-                            </a>
-                            <a class="button is-info is-light" href="inicioSesion.html">
-                                Ingreso
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </nav>
         
         <section class="is-medium mx-6 mb-6">
@@ -43,29 +23,21 @@
                 <h1 class="is-size-1 has-text-weight-light">Registro</h1>
             </div>
             <form>
-                <div class="columns is-centered is-multiline is-mobile">
+                <div id="NombreTotal" class="columns is-centered is-multiline is-mobile">
                         <div class="column is-5-desktop is-5-tablet is-11-mobile">
                             <label class="label">Nombre (s)</label>
                             <div class="control">
-                                <input class="input" type="text" placeholder="Juanito">
+                                <input class="input" type="text" >
                             </div>
                         </div>
                         <div class="column is-5-desktop is-5-tablet is-11-mobile">
                             <label class="label">Apellidos</label>
                             <div class="control">
-                                <input class="input" type="text" placeholder="Pérez">
+                                <input class="input" type="text">
                             </div>
                         </div>
                 </div>
-                <div class="columns is-centered is-mobile">
-                    <div class="field column is-10-desktop is-10-tablet is-11-mobile">
-                        <label class="label">Contraseña</label>
-                        <div class="control">
-                            <input class="input" type="password">
-                        </div>
-                    </div>
-                </div>
-                <div class="columns is-centered is-mobile">
+                <div id="CorreoTotal" class="columns is-centered is-mobile">
                     <div class="field column is-10-desktop is-10-tablet is-11-mobile">
                         <label class="label">Correo</label>
                         <div class="control">
@@ -73,11 +45,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="columns is-centered is-mobile">
+                <div id="ContrasenaTotal" class="columns is-centered is-mobile">
+                    <div class="field column is-10-desktop is-10-tablet is-11-mobile">
+                        <label class="label">Contraseña</label>
+                        <div class="control">
+                            <input class="input" type="password">
+                        </div>
+                    </div>
+                </div>
+                <div id="BotonTotal" class="columns is-centered is-mobile">
                     <div class="field column is-10-desktop is-10-tablet is-11-mobile">
                         <div class="columns is-mobile is-centered">
                             <div class="control">
-                                <button class="button is-link mx-5 my-5">Registrarse</button>
+                                <button class="button is-link mx-5 my-5">Registrarse  <i class="fa-regular fa-paper-plane" style="padding-left: 5px;"></i></button>
                             </div>
                         </div>
                     </div>
