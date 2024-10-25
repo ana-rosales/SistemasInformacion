@@ -1,29 +1,27 @@
 <?php
-session_start();
-require 'conexion.php';
+include_once 'credenciales.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Retrieve and sanitize input data
-    $usuario = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
-    $contrasena = $_POST['contrasena'];
+$usuario = $_POST['usuario'];
+$contrasena = $_POST['contrasena'];
 
-    // Prepare and execute the SQL statement
-    $stmt = $pdo->prepare('SELECT idAsistente, contrasena FROM asistente WHERE usuario = :usuario');
-    $stmt->execute([':usuario' => $usuario]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+$conexion = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-    // Verify password
-    if ($user && password_verify($contrasena, $user['contrasena'])) {
-        // Store user ID in session upon successful login
-        $_SESSION['user_id'] = $user['idAsistente'];
-        
-        // Redirect to a dashboard or homepage
-        header('Location: Pagina/listaEventos.php'); // Replace 'dashboard.php' with the actual page
-        exit;
-    } else {
-        // Redirect to an error page or show an error message
-        header('Location: Pagina/error.html'); // Replace 'loginError.html' with the actual error page
-        exit;
-    }
+if ($conexion->connect_error) {
+    die("Connection failed: " . $conexion->connect_error);
 }
+
+$sql = "SELECT usuario FROM asistente WHERE usuario = '$usuario' AND contrasena = '$contrasena'";
+$result = $conexion->query($sql);
+
+if ($result->num_rows > 0) {
+    session_start();
+    $_SESSION['usuario'] = $usuario;
+    header('Location: Pagina/index.html');
+    exit();
+} else {
+    header('Location: error.html');
+    exit();
+}
+
+$conexion->close();
 ?>
