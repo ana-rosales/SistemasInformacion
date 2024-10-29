@@ -1,0 +1,44 @@
+body{
+    margin: 0%;
+}
+header {
+    background-color: #20A4F3;
+    height: 10vh;
+}
+/* section {
+    border: 1px solid purple;
+    height: 340px;
+} */
+main {
+    height: 80vh;
+    padding-left: 40vw;
+    padding-right: 40vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+footer {
+    background-color: #20A4F3;
+    height: 10vh;
+}
+nav {
+    height: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav a{
+    margin: 1.5%;
+}
+.container{
+    height: inherit;
+    /* width: 50vw; */
+}
+
+@media (max-width: 800px) {
+    nav a {
+        margin: 5%;
+    }
+}
+

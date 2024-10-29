@@ -1,60 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" class="theme-light">
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inicio</title>
-    </head>
-    <body>
-        <nav class="navbar is-info" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="index.html">
-                    <span class="icon is-large">
-                        <i class="fas fa-home fa-lg"></i>
-                    </span>
-                </a>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><i class="fas fa-home fa-lg"></i></a>
         </nav>
-
-        <section class="is-medium mx-6 mb-6 pb-6">
-            <div class="columns is-centered is-mobile mt-6 mb-5">
-                <h1 class="is-size-1 has-text-weight-light">¡Bienvenid@!</h1>
-            </div>
-            <div class="columns is-centered is-mobile is-multiline py-6">
-                <a class="column is-2-desktop is-5-mobile" href="inicioSesion.html">
-                    <div class="columns is-centered">
-                        <button class="button is-info is-soft is-large">
-                            <span class="icon">
-                                <i class="fas fa-user"></i>
-                            </span>
-                            <span>Ingreso</span>
-                        </button>
-                    </div>
-                </a>
-                <a class="column is-2-desktop is-5-mobile" href="registro.html">
-                    <div class="columns is-centered">
-                        <button class="button is-info is-dark is-large">
-                            <span class="icon">
-                                <i class="fas fa-book"></i>
-                            </span>
-                            <span>Registro</span>
-                        </button>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <footer class="footer has-background-info">
-            <div class="content has-text-centered">
-                <p>
-                    <br>Ana Paula Rosales Olguín <i class="fas fa-moon"></i> Germán Heberto Pancardo Ortega<br>
-                    <strong>Ciudad de México | 2024</strong>
-                </p>
-            </div>
-        </footer>
-
-        <script src="js/app.js"></script>
-    </body>
+    </header>
+    <main>
+            <h1>¡Bienvenido!</h1>
+            <button><a href="inicioSesion.html">Iniciar Sesión</a></button>
+            <button><a href="registro.html">Registrarse</a></button>
+    </main>
+    <footer></footer>
+</body>
 </html>
