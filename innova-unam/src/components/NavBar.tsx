@@ -5,7 +5,7 @@ function NavBar() {
     <div className = {styles.navbar}>
         <header>
                 <nav>
-                    <a href="index.html"><i className="fas fa-home fa-lg"></i></a>
+                    <a href="/"><i className="fas fa-home fa-lg"></i></a>
                 </nav>
         </header>
     </div>
