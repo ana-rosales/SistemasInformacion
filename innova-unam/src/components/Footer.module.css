@@ -1,0 +1,6 @@
+footer {
+    height: 10vh;
+    min-height: 56px;
+    border-top: .4vh solid #000;
+    background-color: #20A4F3;
+}

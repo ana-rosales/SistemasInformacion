@@ -1,0 +1,20 @@
+header {
+    height: 9vh;
+    border-bottom: .4vh solid #000;
+    background-color: #20A4F3;
+}
+nav {
+    height: inherit;
+    min-height: 56px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav a{
+    margin: 1.5%;
+}
+@media (max-width: 800px) {
+    nav a {
+        margin: 5%;
+    }
+}

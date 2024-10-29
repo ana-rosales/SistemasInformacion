@@ -1,0 +1,59 @@
+main {
+    height: 80vh;
+    padding-left: 35vw;
+    padding-right: 35vw;
+    background-image: url("fes.jpg");
+    background-repeat:no-repeat;
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    flex-wrap: wrap-reverse;
+}
+main button{
+    height: 9vh;
+    min-height: 50px;
+    margin: 2%;
+    font-size: medium;
+    color: #fff;
+    width: 13vw;
+    min-width: 158px;
+}
+#inicioSesion{
+    background-color: #0B6E4F;
+}
+#registro{
+    background-color: #DE541E;
+}
+h1{
+    /* color: #fff; */
+    order:2;
+}
+nav {
+    height: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav a{
+    margin: 1.5%;
+}
+.container{
+    height: inherit;
+    /* width: 50vw; */
+}
+
+@media (max-width: 800px) {
+    main{
+        padding-left: 28vw;
+        padding-right: 28vw;
+    }
+    main button{
+        height: 5vh;
+        min-height: 34px;
+        margin: 2%;
+        flex: 100%;
+    }
+}
+

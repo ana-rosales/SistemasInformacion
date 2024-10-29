@@ -1,0 +1,13 @@
+body{
+    margin: 0%;
+    border: .4vh solid #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* section {
+    border: 1px solid purple;
+    height: 340px;
+} */
+button{
+    border-radius: 0;
+    border: .4vh solid #000;
+}
